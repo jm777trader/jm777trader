@@ -1,6 +1,3 @@
-
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.fade-in').forEach(el => {
-    el.style.animationPlayState = 'running';
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Site do JM777 carregado com sucesso.");
 });
