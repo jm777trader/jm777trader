@@ -1,108 +1,94 @@
-body {
+
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
   color: white;
-  background-color: #111;
+  background-color: #000;
+  overflow: hidden;
 }
 
-.hero {
-  background: url('profile.jpg') no-repeat center center/cover;
-  height: 100vh;
+.background {
+  background-image: url('profile.jpg');
+  background-size: cover;
+  background-position: top center;
+  filter: brightness(0.4);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
+  height: 100vh;
   text-align: center;
-  border-radius: 12px;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
 }
 
-.buttons .btn {
-  margin: 10px;
-  padding: 12px 24px;
-  font-weight: bold;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
   text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  transition: transform 0.2s ease-in-out;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
-
-.primary {
+.btn.blue {
   background-color: #007bff;
   color: white;
 }
 
-.whatsapp {
-  background-color: #25d366;
+.btn.green {
+  background-color: #28a745;
   color: white;
 }
 
-.instagram {
-  background-color: #e1306c;
+.btn.pink {
+  background-color: #e83e8c;
   color: white;
 }
 
-.about {
-  padding: 40px;
-  text-align: center;
-  background-color: #222;
+.btn:hover {
+  opacity: 0.8;
 }
 
-.about img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.testimonials {
-  background-color: #000;
-  padding: 40px 20px;
-  text-align: center;
+.delay-1 {
+  animation-delay: 0.5s;
 }
 
-.testimonials h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+.delay-2 {
+  animation-delay: 1s;
 }
 
-.carousel {
-  max-width: 600px;
-  margin: auto;
-}
-
-.testimonial {
-  display: none;
-  font-size: 1.1rem;
-  font-style: italic;
-}
-
-.testimonial.active {
-  display: block;
-}
-
-footer {
-  background: #111;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
