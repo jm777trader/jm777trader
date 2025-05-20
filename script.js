@@ -1,3 +1,2 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Site do JM777 carregado com sucesso.");
-});
+
+// Código para interações futuras (animações, scroll, etc.)
