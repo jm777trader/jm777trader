@@ -1,53 +1,69 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
   background-image: url('profile.jpg');
   background-size: cover;
-  background-position: top;
-  height: 100vh;
+  background-position: top center;
+  background-repeat: no-repeat;
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 15px;
-  margin-top: 250px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px 20px;
   text-align: center;
-  width: 90%;
-  max-width: 500px;
 }
 
-h1, p, a {
+.content {
+  max-width: 600px;
+  margin: 0 auto;
   color: white;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  margin: 5px;
-  border-radius: 5px;
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botao {
+  padding: 15px 25px;
+  background-color: #007bff;
+  color: white;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.botao:hover {
+  background-color: #0056b3;
 }
 
-.btn.whatsapp {
-  background-color: #25D366;
-  color: white;
+.botao.whatsapp {
+  background-color: #25d366;
 }
 
-.btn.broker {
-  background-color: #1877F2;
-  color: white;
+.botao.whatsapp:hover {
+  background-color: #1da851;
 }
